@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class CreateEventRequest extends FormRequest
+{
+    public function authorize(): bool
+    {
+        return true;
+    }
+
+    public function rules(): array
+    {
+        return [
+            'title' => 'required|max:155,min:2',
+            'address' => 'required|max:155,min:2',
+            'image' => 'image|required',
+            'start_date' => 'required',
+            'end_date' => 'required',
+            'start_time' => 'required',
+            'country_id' => 'required',
+            'city_id' => 'required',
+            'description' => 'required',
+            'num_tickets' => 'required',
+        ];
+    }
+}
