@@ -7,7 +7,7 @@
             </h2>
 
             <div>
-                <a href="{{ route('events.create') }}" class="dark:text-white hover:text-slate-200">New Event</a>
+                <a href="{{ route('events.create') }}" class="dark:text-gray-400 hover:text-slate-200">New Event</a>
             </div>
         </div>
 
@@ -39,7 +39,7 @@
                         @forelse ($events as $event)
 
                             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-gray-400">
                                     {{ $event->title }}
                                 </th>
                                 <td class="px-6 py-4">
@@ -49,18 +49,41 @@
                                     {{ $event->country->name }}
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a
+
+                                    <div class="flex space-x-2">
+                                        <a
                                         href="{{ route('events.edit', $event) }}"
                                         class="text-green-400 hover:text-green-600"
-                                    >
-                                        Edit
-                                    </a>
+                                        >
+                                            Edit
+                                        </a>
+
+                                        <form method="POST" action="{{ route('events.destroy', $event) }}">
+                                            @csrf
+                                            @method('DELETE')
+
+                                            <a
+                                                href="{{ route('events.destroy', $event) }}"
+                                                onclick="event.preventDefault();
+                                                this.closest('form').submit();"
+                                                class="text-red-500 hover:text-red-700"
+                                            >
+                                                Delete
+                                            </a>
+                                        </form>
+
+                                    </div>
+
                                 </td>
                             </tr>
 
                         @empty
 
-                            <h1>No Events</h1>
+                            <tr>
+                                <td colspan="4" class="px-6 py-4 text-center font-medium text-gray-900 whitespace-nowrap dark:text-gray-300">
+                                    No Events found
+                                </td>
+                            </tr>
 
                         @endforelse
 
