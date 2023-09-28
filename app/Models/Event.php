@@ -21,10 +21,10 @@ class Event extends Model
         'start_time',
         'image',
         'address',
-        'country_id',
+        'num_tickets',
         'user_id',
+        'country_id',
         'city_id',
-        'num_tickets'
     ];
 
     public function user() : BelongsTo {

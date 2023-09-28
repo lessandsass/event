@@ -52,8 +52,8 @@
 
                                     <div class="flex space-x-2">
                                         <a
-                                        href="{{ route('events.edit', $event) }}"
-                                        class="text-green-400 hover:text-green-600"
+                                            href="{{ route('events.edit', $event) }}"
+                                            class="text-green-400 hover:text-green-600"
                                         >
                                             Edit
                                         </a>

@@ -35,7 +35,12 @@
 
                     <div>
 
-                        <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Title</label>
+                        <label
+                            for="title"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >
+                            Title
+                        </label>
                         <input type="text" id="title" name="title" class="bg-gray-700 text-gray-300 text-sm rounded-lg border-transparent focus:border-transparent focus:ring-0 w-full" placeholder="Laravel Event">
 
                         @error('title')
@@ -79,7 +84,10 @@
                             id="city_id"
                             class="bg-gray-700 text-gray-300 text-sm rounded-lg w-full border-transparent focus:border-transparent focus:ring-0"
                         >
-                            <template x-for="city in cities" :key="city.id">
+                            <template
+                                x-for="city in cities"
+                                :key="city.id"
+                            >
                                 <option x-bind:value="city.id" x-text="city.name"></option>
                             </template>
                         </select>
@@ -175,7 +183,6 @@
                             id="end_date"
                             name="end_date"
                             class="bg-gray-700 text-gray-300 text-sm rounded-lg border-transparent focus:border-transparent focus:ring-0"
-                            placeholder="Laravel event"
                         >
 
                         @error('end_date')
@@ -200,7 +207,6 @@
                             id="start_time"
                             name="start_time"
                             class="bg-gray-700 text-gray-300 text-sm rounded-lg border-transparent focus:border-transparent focus:ring-0"
-                            placeholder="Laravel event"
                         >
 
                         @error('start_time')
@@ -265,6 +271,7 @@
                         <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Tags</h3>
                         <ul
                             class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+
                             @foreach ($tags as $tag)
                                 <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                                     <div class="flex items-center pl-3">
@@ -276,6 +283,7 @@
                                     </div>
                                 </li>
                             @endforeach
+
                         </ul>
                     </div>
 
