@@ -90,7 +90,10 @@
                             id="city_id"
                             class="bg-gray-700 text-gray-300 text-sm rounded-lg w-full border-transparent focus:border-transparent focus:ring-0"
                         >
-                            <template x-for="city in cities" :key="city.id">
+                            <template
+                                x-for="city in cities"
+                                :key="city.id"
+                            >
                                 <option
                                     x-bind:value="city.id"
                                     x-text="city.name"
