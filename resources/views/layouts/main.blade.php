@@ -18,8 +18,6 @@
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             @include('layouts.main-navigation')
 
-
-
             <!-- Page Content -->
             <main class="max-w-7xl mx-auto mt-4">
                 {{ $slot }}

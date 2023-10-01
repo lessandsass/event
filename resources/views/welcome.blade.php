@@ -16,7 +16,7 @@
                     >
 
                     <div class="flex flex-col justify-between py-6 lg:mx-6">
-                        <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        <a href="{{ route('eventsShow', $event->id) }}" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
                             {{ $event->title }}
                         </a>
 
