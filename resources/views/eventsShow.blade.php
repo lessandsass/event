@@ -28,23 +28,23 @@
                         class="flex space-x-2 p-4"
                         x-data="{
                             eventLike: @js($like),
-                            {{-- savedEvent: @js($savedEvent), --}}
-                            {{-- attending: @js($attending), --}}
+                            savedEvent: @js($savedEvent),
+                            attending: @js($attending),
                             onHandleLike() {
                                 axios.post(`/events-like/{{ $event->id }}`).then(res => {
                                     this.eventLike = res.data
                                 })
                             },
-                            {{-- onHandleSavedEvent() {
-                                axios.post(`/events-saved/{{ $event->id }}`).then(res => {
+                            onHandleSavedEvent() {
+                                axios.post(`/events-save/{{ $event->id }}`).then(res => {
                                     this.savedEvent = res.data
                                 })
-                            }, --}}
-                            {{-- onHandleAttending() {
+                            },
+                            onHandleAttending() {
                                 axios.post(`/events-attending/{{ $event->id }}`).then(res => {
                                     this.attending = res.data
                                 })
-                            } --}}
+                            }
                         }"
                     >
 
@@ -62,27 +62,32 @@
                             Like
                         </button>
 
-                        {{-- <button type="button" @click="onHandleSavedEvent"
+                        <button
+                            type="button"
+                            @click="onHandleSavedEvent"
                             class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            :class="savedEvent ? 'bg-yellow-700 hover:bg-yellow-800' : 'bg-slate-400 hover:bg-slate-500'">
+                            :class="savedEvent ? 'dark:bg-yellow-700 dark:hover:bg-yellow-800' : 'dark:bg-slate-400 dark:hover:bg-slate-500'"
+                        >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-3.5 h3.5 mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
                             </svg>
                             Save
-                        </button> --}}
+                        </button>
 
-                        {{-- <button type="button" @click="onHandleAttending"
+                        <button
+                            type="button"
+                            @click="onHandleAttending"
                             class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            :class="attending ? 'bg-indigo-700 hover:bg-indigo-800' : 'bg-slate-400 hover:bg-slate-500'">
+                            :class="attending ? 'dark:bg-indigo-700 dark:hover:bg-indigo-800' : 'dark:bg-slate-400 dark:hover:bg-slate-500'">
                             Attending
                             <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M1 5h12m0 0L9 1m4 4L9 9" />
                             </svg>
-                        </button> --}}
+                        </button>
 
                     </div>
                 @endauth
