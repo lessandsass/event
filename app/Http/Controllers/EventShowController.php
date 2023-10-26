@@ -17,4 +17,5 @@ class EventShowController extends Controller
 
         return view('eventsShow', compact('event', 'like', 'attending', 'savedEvent'));
     }
+
 }

@@ -36,7 +36,12 @@
 
                     <div>
 
-                        <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Title</label>
+                        <label
+                            for="title"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >
+                            Title
+                        </label>
                         <input
                             type="text"
                             id="title"
@@ -156,7 +161,7 @@
                     </div>
 
                     <div>
-
+                        
                         <label
                             for="start_date"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"

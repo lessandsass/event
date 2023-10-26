@@ -29,7 +29,7 @@
                     >
                         Caption
                     </label>
-                    <input type="text" id="caption" name="caption" class="bg-gray-700 text-gray-300 text-sm rounded-lg border-transparent focus:border-transparent focus:ring-0 w-full py-3" placeholder="Laravel Event">
+                    <input type="text" id="caption" name="caption" class="bg-gray-700 text-gray-300 text-sm rounded-lg border-transparent focus:border-transparent focus:ring-0 w-full py-3" placeholder="Laravel Gallery">
 
                     @error('caption')
                         <div class="text-sm text-red-400">{{ $message }}</div>

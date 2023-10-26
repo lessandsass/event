@@ -38,8 +38,7 @@ class GalleryController extends Controller
         }
 
         return back();
-
-
+ 
     }
 
     public function edit(Gallery $gallery)

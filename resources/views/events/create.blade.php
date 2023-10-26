@@ -41,7 +41,13 @@
                         >
                             Title
                         </label>
-                        <input type="text" id="title" name="title" class="bg-gray-700 text-gray-300 text-sm rounded-lg border-transparent focus:border-transparent focus:ring-0 w-full" placeholder="Laravel Event">
+                        <input
+                            type="text"
+                            id="title"
+                            name="title"
+                            class="bg-gray-700 text-gray-300 text-sm rounded-lg border-transparent focus:border-transparent focus:ring-0 w-full"
+                            placeholder="Laravel Event"
+                        >
 
                         @error('title')
                             <div class="text-sm text-red-400">{{ $message }}</div>

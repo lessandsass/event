@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Country;
 use Illuminate\View\View;
 use Illuminate\Support\Str;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\CreateEventRequest;
 use App\Http\Requests\UpdateEventRequest;
