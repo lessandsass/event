@@ -161,7 +161,7 @@
                     </div>
 
                     <div>
-                        
+
                         <label
                             for="start_date"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
@@ -174,7 +174,7 @@
                             id="start_date"
                             name="start_date"
                             class="bg-gray-700 text-gray-300 text-sm rounded-lg border-transparent focus:border-transparent focus:ring-0"
-                            value="{{ old('start_date', $event->start_date) }}"
+                            value="{{ old('start_date', $event->start_date->format('Y-d-m')) }}"
                         >
 
                         @error('start_date')
@@ -199,7 +199,7 @@
                             id="end_date"
                             name="end_date"
                             class="bg-gray-700 text-gray-300 text-sm rounded-lg border-transparent focus:border-transparent focus:ring-0"
-                            value="{{ old('end_date', $event->end_date) }}"
+                            value="{{ old('end_date', $event->end_date->format('Y-d-m')) }}"
                         >
 
                         @error('end_date')
